@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+        <h1>Formulario para edición</h1>
+            {% for empleado in empleados %}
+            <form method="POST" action="/update" enctype="multipart/form-data">
+                ID:
+                <input type="text" name="txtId" value="{{empleado[0]}}"   id=" txtId">
+                <br>
+                Nombre:
+                <input type="text" name="txtNombre" value="{{empleado[1]}}" id="txtNombre">
+                <br>
+                Correo:
+                <input type="text" name="txtCorreo" value="{{empleado[2]}}" id="txtCorreo">
+                <br>
+                Foto:
+                <img src="{{url_for('uploads', nombreFoto = empleado[3])}}" class="img-thumbnail" width="100" alt="foto persona">
+                <br>
+                <input type="file" name="txtFoto" value="{{empleado[3]}}" id="txtFoto">
+                <br><br>
+                <input type="submit" value="Aceptar">
+                <br>
+            </form>
+            {% endfor %}
+{% include 'footer.html' %}    
+
+

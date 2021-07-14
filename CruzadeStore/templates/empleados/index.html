@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+    <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for empleado in empleados %}
+            <tr>
+                <td>{{empleado[0]}}</td>
+                <td>
+                    <img src="{{url_for('uploads', nombreFoto = empleado[3])}}" class="img-thumbnail" width="100" alt="foto">
+                </td>
+                <td>{{empleado[1]}}</td>
+                <td>{{empleado[2]}}</td>
+                <td>
+                    <a href="/edit/{{empleado[0]}}"> Editar </a> | <a href="/destroy/{{empleado[0]}}" > Borrar </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>            
+    </table>
+{% include 'footer.html' %}
