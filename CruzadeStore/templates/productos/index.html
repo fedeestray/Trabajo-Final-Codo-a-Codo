@@ -1,0 +1,29 @@
+{% include 'header.html' %}
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>Código</th>
+            <th>Foto</th>
+            <th>Nombre del producto</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+        <tr>
+            <td>{{producto[0]}}</td>
+            <td>
+                <img src="{{url_for('uploads', nombreFoto = producto[3])}}" class="img-thumbnail" width="100" alt="foto">
+            </td>
+            <td>{{producto[1]}}</td>
+            <td>{{producto[2]}}</td>
+            <td>
+                <a href="/productos/edit/{{producto[0]}}"> Editar </a> | <a href="/productos/destroy/{{producto[0]}}" > Borrar </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>            
+</table>
+
+{% include 'footer.html' %}

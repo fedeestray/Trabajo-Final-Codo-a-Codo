@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+        <h1>Formulario para edición</h1>
+            {% for producto in productos %}
+            <form method="POST" action="/productos/update" enctype="multipart/form-data">
+                ID:
+                <input type="text" name="txtId" value="{{producto[0]}}"   id=" txtId">
+                <br>
+                Nombre de producto:
+                <input type="text" name="txtNombre" value="{{producto[1]}}" id="txtNombre">
+                <br>
+                Precio:
+                <input type="number" name="txtPrecio" value="{{producto[2]}}" id="txtPrecio">
+                <br>
+                Foto:
+                <img src="{{url_for('uploads', nombreFoto = producto[3])}}" class="img-thumbnail" width="100" alt="foto producto">
+                <br>
+                <input type="file" name="txtFoto" value="{{producto[3]}}" id="txtFoto">
+                <br><br>
+                <input type="submit" value="Aceptar">
+                <br>
+            </form>
+            {% endfor %}
+{% include 'footer.html' %}    
