@@ -1,0 +1,12 @@
+{% include 'header.html' %}
+<form method="post" action="/form_login" enctype="multipart/form-data">
+    <h2>Nombre de usuario:</h2> <br>
+    <input type="text" name="username"> <br>
+    <h2>Contraseña:</h2> <br>
+    <input type="password" name="password"> <br> <br>
+
+    <input type="submit" value="Ingresar">
+</form>
+
+<h5>{{info}}</h5>
+{% include 'footer.html' %}

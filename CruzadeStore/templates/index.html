@@ -1,0 +1,30 @@
+{% include 'header.html' %}
+    <aside class="sidebar">
+        <div class="container">
+            <h4>CONOCE NUESTROS PRODUCTOS:</h4>
+            <ul class="nav nav-pills">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">FAMILIA DE PRODUCTOS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Gaming</a>
+                    <a class="dropdown-item" href="#">Bluetooth</a>
+                    <a class="dropdown-item" href="#">In-Ear</a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- Aca va la tabla-->
+    </aside>
+
+    <div class="main-div">
+        <div class="card">
+        {% for producto in productos %}    
+            <div class="card-content">
+                <img src="{{url_for('uploads', nombreFoto = producto[3])}}" class="img-thumbnail" width="300" alt="{{producto[1]}}">
+                <h2 class="card-title">{{producto[1]}}</h2>
+                <a href= "/compra" target="_blank" class="button">Comprar</a>
+            </div>
+        </div>
+        <br>
+        {% endfor %}    
+    </div>
+{% include 'footer.html' %}

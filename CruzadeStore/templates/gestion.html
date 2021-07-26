@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+    <div class="gestion-container">
+        <table class="table-table-dark">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Código</th>
+                    <th>Foto</th>
+                    <th>Nombre del producto</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td>{{producto[0]}}</td>
+                    <td>
+                        <img src="{{url_for('uploads', nombreFoto = producto[3])}}" class="img-thumbnail" width="100" alt="foto">
+                    </td>
+                    <td>{{producto[1]}}</td>
+                    <td>{{producto[2]}}</td>
+                    <td>
+                        <a href="/productos/edit/{{producto[0]}}"> Editar </a> | <a href="/productos/destroy/{{producto[0]}}" > Borrar </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>  
+        </table>
+        <a href="/productos/create" class='btn btn-primary' type="button" id='createProd' style="color: black; font-style: unset;">Crear nuevo registro</a>       
+    </div>
+{% include 'footer.html' %}

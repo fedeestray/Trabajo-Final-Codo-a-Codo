@@ -1,33 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Flask</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/ce7defe461.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Dr+Sugiyama&family=Fuggles&family=Glass+Antiqua&family=Italiana&family=Lobster&family=Rouge+Script&family=Rye&family=Satisfy&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheet/Css.css">
+    <link rel="stylesheet" href="/stylesheet/CssForm.css">
+    <title>CruzadeStore</title>
+    <link rel="icon" href="./img/Dtafalonso-Android-Lollipop-Headphones-Apollo.ico">
 </head>
-<body>
-    <div class="container">
-        <h1 class="h1-responsive" style="text-align: center;">Practica Flask</h1>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand">FLASK</a>
-            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="my-nav" class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Index <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="create" tabindex="-1" aria-disabled="false">Crear registro de empleado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="/productos/" tabindex="-1" aria-disabled="false">Listado productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="/productos/create" tabindex="-1" aria-disabled="false">Crear registro de producto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<body class="grid-container">
+    <header class="header">
+        <div>            
+            <img src="/img/headsetpic.jpg" alt="LOGO", height="220rem", width="400rem",>          
+        </div>
+        <div>
+            <p style="color: black"><font color=#ff851b>C</font></b></i>ruzadeStore</p>
+            
+        </div>
+    </header>                                                                                                      
+    <nav class="navbar navbar-expand-md" style="background-color: #11111198;">
+        <a class="navbar-brand" href="/">
+            <img src="./img/Dtafalonso-Android-Lollipop-Headphones-Apollo.ico" alt="" width="40" height="40" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="color:white" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color:white"><b> | | | </b></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Acerca_de">Acerca de</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacto">Contacto</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Gestión</a>
+                </li>    
+            </ul>
+        </div>  
+    </nav>
